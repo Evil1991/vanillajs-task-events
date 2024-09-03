@@ -1,24 +1,24 @@
-document.addEventListener("DOMContentLoaded", function() {
-  /// форма
-  let form = document.querySelector('form');
-  form.addEventListener('submit', function (e) {
-    let inputs = document.querySelectorAll('input');
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector('form');
+  form.addEventListener('submit', (event) => {
+    const inputs = document.querySelectorAll('input');
 
     inputs.forEach(item => {
       if (item.value.length === 0) {
-        e.preventDefault()
         item.nextElementSibling.style.display = "block";
       } else {
         item.nextElementSibling.style.display = "none";
       }
     })
+
+    event.preventDefault();
+    event.stopPropagation();
   })
 
-  /// сменна цвета
-  let btn = document.querySelector('.btn-color-change');
-  let body = document.querySelector('body')
+  const changeColorBtn = document.querySelector('.btn-color-change');
+  const body = document.querySelector('body')
 
-  btn.addEventListener('click', function() {
+  changeColorBtn.addEventListener('click', () => {
     body.classList.toggle('btn-color-change--active')
   })
 });

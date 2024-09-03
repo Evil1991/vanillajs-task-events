@@ -4,31 +4,24 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <main class="wrapper">
+    <div class="container">
+      <form action="" class="form">
+        <label>EMAIL</label>
+        <input type="email" placeholder="email" />
+        <div class="warning">необходимо заполнить</div>
 
+        <label>PASSWORD</label>
+        <input type="password" placeholder="password" />
+        <div class="warning">необходимо заполнить</div>
 
-<div class="wrapper">
-  <button class="btn-color-change">Нажмите, чтобы изменить цвет</button>
-  <div class="container">
-    <div class="brand-logo"></div>
-    <div class="brand-title">TWITTER</div>
-    <form action="" class="inputs">
-      <label>EMAIL</label>
-      <input type="email" placeholder="email" />
-      <div class="warning">Заполните поле</div>
-
-      <label>PASSWORD</label>
-      <input type="password" placeholder="password" />
-      <div class="warning">Заполните поле</div>
-
-      <button type="submit">LOGIN</button>
-    </form>
-  </div>
-</div>
-
-
-
-<script src="script.js"></script>
+        <button type="submit">LOGIN</button>
+      </form>
+    </div>
+    <button class="btn-color-change">Сменить тему</button>
+  </main>
 </body>
 </html>
